@@ -26,6 +26,12 @@ code {
   background-color: #f6f7fc;
 }
 
+/* Reset css view screen */
+.Container {
+  width: 100vw;
+  height: 100vh;
+}
+
 /* Config Form authen info */
 #components-form-demo-normal-login .login-form {
   max-width: 300px;
