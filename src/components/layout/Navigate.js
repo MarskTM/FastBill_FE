@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import { Menu } from 'antd'
 import {
     UserOutlined,
@@ -19,14 +20,13 @@ const getItem = (label, key, icon, children, type) => {
 const items = [
     getItem('Profile', '1', <UserOutlined />),
     getItem('Manager', 'sub4', <SettingOutlined />, [
-        getItem('Option 9', '2'),
-        getItem('Option 10', '3'),
-        getItem('Option 11', '4'),
-        getItem('Option 12', '5'),
+        getItem('Home', '2'),
+        getItem('Payments', '3'),
+        getItem('Charts', '4'),
     ]),
     getItem(
-        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-            Ant Design
+        <a href="https://www.evn.com.vn/" target="_blank" rel="noopener noreferrer">
+            Pages
         </a>,
         'link',
         <LinkOutlined />,
@@ -34,6 +34,21 @@ const items = [
 ];
 
 export default function Navigate() {
+    const navigate = useNavigate();
+    const [key, setKey] = useState('2')
+    useEffect(() => {
+        if (key === '1') {
+            navigate('/profile')
+        }
+        if (key === '2') {
+            navigate('/admin')
+        }
+        if (key === '3') {
+            navigate('/payment')
+        }
+    }, [key])
+
+
     return (
         <div className=''>
             <h1 className='bg-white w-full h-16 pt-3 text-center text-blue-700 text-3xl font-bold'>Dashboard</h1>
@@ -41,8 +56,8 @@ export default function Navigate() {
                 theme="light"
                 mode="inline"
                 className="h-screen"
-                defaultSelectedKeys={['1']}
-                onSelect={(e) => console.log(e.key)}
+                defaultSelectedKeys={['2']}
+                onSelect={(e) => setKey(e.key)}
                 items={items}
             />
         </div>
