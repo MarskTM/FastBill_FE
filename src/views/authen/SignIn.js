@@ -64,9 +64,7 @@ export default function SignInScreen() {
                 <Checkbox>Remember me</Checkbox>
               </Form.Item>
 
-              <a className="login-form-forgot" href="">
-                Forgot password
-              </a>
+
             </Form.Item>
 
             <Form.Item>
@@ -74,7 +72,12 @@ export default function SignInScreen() {
                 Log in
               </Button>
               Or <Link to="/signup">register now!</Link>
+
+
             </Form.Item>
+            <a className="login-form-forgot ml-[70%]" href="">
+              Forgot password ?
+            </a>
           </Form>
         </div>
       </div>

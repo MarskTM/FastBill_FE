@@ -3,6 +3,11 @@
     width: 100% !important;
 }
 
+.rm_max_height {
+    max-height: 100% !important; 
+    height: 100% !important;
+}
+
 .slice_header_img {
     max-width: 200px !important; 
     max-height: 80px;

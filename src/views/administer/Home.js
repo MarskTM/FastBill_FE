@@ -18,36 +18,36 @@ export default function Home() {
       </Sider>
       <Header />
       <div className='row-span-5 col-span-5'>
-        <div className='w-[96%] h-[33%] ml-5 mb-10 pt-4 flex justify-around bg-white shadow-lg shadow-gray-200'>
-          <div className='w-72 h-24  bg-slate-200 rounded-md flex'>
+        <div className='w-[96%] h-[30%] ml-5 mb-10 pt-4 flex justify-around bg-white shadow-lg shadow-gray-200'>
+          <div className='w-64 h-24  bg-slate-200 rounded-md flex'>
             <DollarOutlined style={{ fontSize: '55px', color: '#6666FF' }} className=' m-5 bg-gray-300 rounded-full' />
             <div className='flex flex-col items-end mt-3'>
-              <p className='font-semibold'>Giá tiền điện</p>
-              <h1 className='text-4xl'>21.000 đ</h1>
+              <p className='font-semibold'>Hạng thành viên</p>
+              <h1 className='text-4xl'>Bạc</h1>
             </div>
           </div>
 
-          <div className='w-72 h-24  bg-slate-200 rounded-md flex'>
+          <div className='w-64 h-24  bg-slate-200 rounded-md flex'>
             <DotChartOutlined style={{ fontSize: '55px', color: '#6666FF' }} className='m-5 bg-gray-300 rounded-full' />
             <div className='flex flex-col items-end mt-3 ml-3'>
-              <p className='font-semibold'>Số điện</p>
-              <h1 className='text-4xl'>32</h1>
+              <p className='font-semibold'>Tích điểm</p>
+              <h1 className='text-4xl'>320</h1>
             </div>
           </div>
 
           <div className='w-72 h-24  bg-slate-200 rounded-md flex'>
             <AliwangwangOutlined style={{ fontSize: '55px', color: '#6666FF' }} className='m-5 bg-gray-300 rounded-full' />
-            <div className='flex flex-col items-end mt-3 ml-4'>
-              <p className='font-semibold'>Số điện cũ</p>
-              <h1 className='text-4xl'>002.435</h1>
+            <div className='flex flex-col items-end mt-3 ml-2'>
+              <p className='font-semibold'>Giá tiền điện</p>
+              <h1 className='text-4xl'>3.000 đ/số</h1>
             </div>
           </div>
 
-          <div className='w-72 h-24  bg-slate-200 rounded-md flex'>
+          <div className='w-80 h-24  bg-slate-200 rounded-md flex'>
             <AliwangwangOutlined style={{ fontSize: '55px', color: '#6666FF' }} className='m-5 bg-gray-300 rounded-full' />
-            <div className='flex flex-col items-end mt-3 ml-4'>
-              <p className='font-semibold'>Số điện mới</p>
-              <h1 className='text-4xl'>002.436</h1>
+            <div className='flex flex-col items-end mt-3 '>
+              <p className='font-semibold'>Mã người dùng</p>
+              <h1 className='text-4xl'>1121436013</h1>
             </div>
           </div>
         </div>
@@ -55,7 +55,6 @@ export default function Home() {
           <RenderLineChart />
           <TimeLine />
         </div>
-
       </div>
     </div>
   )

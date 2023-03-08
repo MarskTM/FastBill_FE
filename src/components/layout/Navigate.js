@@ -19,7 +19,7 @@ const getItem = (label, key, icon, children, type) => {
 
 const items = [
     getItem('Profile', '1', <UserOutlined />),
-    getItem('Manager', 'sub4', <SettingOutlined />, [
+    getItem('Manager', 'menu1', <SettingOutlined />, [
         getItem('Home', '2'),
         getItem('Payments', '3'),
         getItem('Charts', '4'),
@@ -35,7 +35,7 @@ const items = [
 
 export default function Navigate() {
     const navigate = useNavigate();
-    const [key, setKey] = useState('2')
+    const [key, setKey] = useState('')
     useEffect(() => {
         if (key === '1') {
             navigate('/profile')
@@ -46,7 +46,7 @@ export default function Navigate() {
         if (key === '3') {
             navigate('/payment')
         }
-    }, [key])
+    }, [key, navigate])
 
 
     return (
@@ -56,7 +56,8 @@ export default function Navigate() {
                 theme="light"
                 mode="inline"
                 className="h-screen"
-                defaultSelectedKeys={['2']}
+                // defaultSelectedKeys={['2']}
+                defaultOpenKeys={['menu1']}
                 onSelect={(e) => setKey(e.key)}
                 items={items}
             />

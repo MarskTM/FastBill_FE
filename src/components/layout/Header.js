@@ -41,7 +41,7 @@ export default function Header() {
           :
           <Space wrap className='bg-slate-100 px-4 rounded-md '>
             <Avatar size={60} src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-50.jpg" />
-            <h1 className='mt-4 text-lg font-medium'>Hello there!</h1>
+            <h1 className='text-lg font-medium'>Hello there!</h1>
           </Space>
         }
       </Space>
