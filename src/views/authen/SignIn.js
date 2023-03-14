@@ -1,10 +1,11 @@
 import React from "react";
 import "../../assets/styles/index.css";
 import signin_bg from "../../assets/images/signin_bg.jpg";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import {EyeInvisibleOutlined, EyeTwoTone, LockOutlined, UserOutlined} from "@ant-design/icons";
 import { Button, Checkbox, Form, Input } from "antd";
 import { Link } from "react-router-dom";
-
+import {Login} from "../../utils/API/AuthAPI"
+import {useNavigate} from "react-router-dom";
 
 export default function SignInScreen() {
   const onFinish = (values) => {
